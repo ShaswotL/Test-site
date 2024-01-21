@@ -238,31 +238,38 @@
         
         
         
-        @media screen and (max-width: 1000px) {
+         /* Changed max-width because two divisions were overlapping. Works quite well*/
+        @media screen and (max-width: 1150px) {
           .title {
-            font-size: 4rem;
-            /* line-height:  */
+              /* TO keep it more responsive */
+              font-size:13vw;
+
+              /* To keep div in center */
+              margin-block-start: -2.5rem;
+
+/* Removed line height because it was not doing anything */
           }
-        
+          
           
           .title > p {
-            line-height: 5rem;
+            /* Works quite well relative to the font-size*/
+            line-height: 100%;
             letter-spacing: -0.3rem;
           }
-          
+
           nav > :not(.sitename, .material-icons) {
             display: none;
           }
-          
+
           nav {
             justify-content: space-between;
           }
-          
+
           .material-icons {
             display: flex;
             align-items: center;
           }
-          
+
         }
         </style>
 </head>
